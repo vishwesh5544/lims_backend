@@ -1,3 +1,4 @@
+--
 DROP TABLE IF EXISTS `departments`;
 
 CREATE TABLE departments
@@ -8,3 +9,16 @@ CREATE TABLE departments
     primary key (id),
     unique (id)
 );
+
+--
+DROP TABLE IF EXISTS `units`;
+
+CREATE TABLE units
+(
+    id int(11) AUTO_INCREMENT NOT NULL,
+    name varchar(255) NOT NULL,
+    primary key (id),
+    unique (id)
+)
+
+
