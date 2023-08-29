@@ -1,7 +1,7 @@
 package com.scylex.lims_backend.controllers;
 
 
-import com.scylex.lims_backend.models.ApiResponse;
+import com.scylex.lims_backend.models.response.ApiResponse;
 import com.scylex.lims_backend.models.Department;
 import com.scylex.lims_backend.services.departmentService.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
