@@ -9,6 +9,8 @@ import java.util.List;
 
 public interface UnitService {
     List<Unit> getAllUnits();
+
+    Unit getUnitById(Long unitId);
 }
 
 @Service
@@ -19,5 +21,10 @@ class UnitServiceImpl implements UnitService {
     @Override
     public List<Unit> getAllUnits() {
         return unitRepository.findAll();
+    }
+
+    @Override
+    public Unit getUnitById(Long unitId) {
+        return unitRepository.findById(unitId).orElse(null);
     }
 }

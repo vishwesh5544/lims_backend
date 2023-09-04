@@ -2,6 +2,7 @@ package com.scylex.lims_backend.controllers;
 
 
 import com.scylex.lims_backend.models.Lab;
+import com.scylex.lims_backend.models.dto.LabWithUnit;
 import com.scylex.lims_backend.models.request.AddLabRequest;
 import com.scylex.lims_backend.models.response.ApiResponse;
 import com.scylex.lims_backend.services.labService.LabService;
@@ -49,8 +50,8 @@ public class LabController {
     }
 
     @GetMapping("/all")
-    ResponseEntity<ApiResponse<List<Lab>>> getAllLabs() {
-        ApiResponse<List<Lab>> apiResponse = new ApiResponse<>(HttpStatus.OK.value(),
+    ResponseEntity<ApiResponse<List<LabWithUnit>>> getAllLabs() {
+        ApiResponse<List<LabWithUnit>> apiResponse = new ApiResponse<>(HttpStatus.OK.value(),
                 labService.getAllLabs(), "All labs fetched successfully!");
         return ResponseEntity.ok(apiResponse);
     }
